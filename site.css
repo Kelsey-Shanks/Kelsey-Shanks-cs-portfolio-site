@@ -41,6 +41,14 @@ footer {
     clear: both;
 }
 
+h3{
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
 #about-text ul {
     list-style-type: none;
     padding: 0;
@@ -53,10 +61,14 @@ footer {
     margin-right: 10px;
 }
 
+#about-text p {
+    font-size: 16px;
+}
+
 /* Format image on About page */
 #about-image {
     float: left;
-    width: 40%;
-    margin-left: 10px;
+    width: 50%;
+    margin-left: 20px;
 }
 
