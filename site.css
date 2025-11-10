@@ -41,3 +41,8 @@ footer {
     margin: 0;
 }
 
+#about-image {
+    float: left;
+    position: relative;
+}
+
