@@ -23,11 +23,9 @@ header, h1 {
 }
 
 /* Add background of page */
-body {
-    background-color: rgb(255, 238, 252);
-    background-image: url('images/cherry-blossoms.png');
+#background-img {
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
     opacity: 0.2;
 }
