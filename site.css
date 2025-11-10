@@ -44,17 +44,19 @@ footer {
 #about-text ul {
     list-style-type: none;
     padding: 0;
+    padding-right: 10px;
     margin: 0;
 }
 
 #about-text {
     float: left;
-    width: 70%;
+    width: 50%;
 }
 
 /* Format image on About page */
 #about-image {
     float: left;
-    width: 30%;
+    width: 40%;
+    padding-left: 10px;
 }
 
