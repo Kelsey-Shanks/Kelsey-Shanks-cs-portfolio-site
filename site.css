@@ -43,10 +43,15 @@ footer {
 
 h3{
     font-size: 24px;
+    margin-bottom: 0px;
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 21px;
+}
+
+#about-group p{
+    font-size: 18px;
 }
 
 #about-text ul {
@@ -61,14 +66,10 @@ h4 {
     margin-right: 10px;
 }
 
-#about-text p {
-    font-size: 16px;
-}
-
 /* Format image on About page */
 #about-image {
     float: left;
-    width: 50%;
-    margin-left: 20px;
+    width: 40%;
+    margin-left: 50px;
 }
 
