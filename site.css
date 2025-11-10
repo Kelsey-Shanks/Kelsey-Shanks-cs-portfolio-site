@@ -92,3 +92,12 @@ img {
     border-color:rgb(58, 80, 61);
 }
 
+table tbody tr td {
+    border-collapse: collapse;
+    background-color: rgb(236, 183, 234);
+    border-style: solid;
+    border-color: rgb(146, 113, 145);
+    padding: 10px;
+    text-align: center;
+    vertical-align: center;
+}
