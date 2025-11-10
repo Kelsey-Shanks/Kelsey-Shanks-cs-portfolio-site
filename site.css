@@ -94,6 +94,11 @@ h4 {
     color: rgb(77 53 76);
 }
 
+p{
+    color: rgb(77 53 76);
+    font-size: 18px;
+}
+
 /* Format image on About page */
 #about-image {
     float: left;
