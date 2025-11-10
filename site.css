@@ -24,7 +24,7 @@ header, h1 {
 
 /* Add background of page */
 body {
-    background-image: linear-gradient(rgb(230, 201, 229)), rgb(255, 255, 255), url('images/cherry-blossoms.png');
+    background-image: 'images/cherry-blossoms.png';
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
