@@ -13,7 +13,8 @@ header, nav {
 
 header, h1 {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(253 228 252);
+    color: rgb(251 246 251);
+    font-size: 60px;
 }
 
 #top-links a {
@@ -66,14 +67,17 @@ footer {
 h3{
     font-size: 24px;
     margin-bottom: 0px;
+    color: rgb(93 64 92)
 }
 
 h4 {
     font-size: 21px;
+    color: rgb(107 79 106);
 }
 
 #about-group p{
     font-size: 18px;
+    color: rgb(77 53 76);
 }
 
 #about-text ul {
@@ -86,6 +90,10 @@ h4 {
     margin-right: 10px;
 }
 
+#about-text p{
+    color: rgb(77 53 76);
+}
+
 /* Format image on About page */
 #about-image {
     float: left;
@@ -96,7 +104,7 @@ h4 {
 img {
     border-width: 5px;
     border-style: solid;
-    border-color:rgb(58, 80, 61);
+    border-color:rgb(146, 113, 145);
 }
 
 table, tbody, tr, td {
