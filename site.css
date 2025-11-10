@@ -35,14 +35,26 @@ footer {
 }
 
 /* Format page text on About page */
-#about-text {
+#about-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#about-text ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
+#about-text {
+    float: left;
+    width: 70%;
+}
+
+/* Format image on About page */
 #about-image {
     float: left;
-    position: relative;
+    width: 30%;
 }
 
