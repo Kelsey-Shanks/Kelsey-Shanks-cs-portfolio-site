@@ -179,6 +179,18 @@ table {
     color: rgb(77 53 76);
 }
 
-#home-page-text{
+#home-page-text {
     text-align: center;
+}
+
+/* Formatting portfolio listing */
+#portfolio-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#portfolio-title {
+    font-size: 21px;
+    color: rgb(107 79 106);
 }
