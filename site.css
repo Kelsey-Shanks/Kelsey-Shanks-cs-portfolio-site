@@ -64,17 +64,20 @@ footer {
     clear: both;
 }
 
+/* Format subheader on About page */ 
 h3{
     font-size: 24px;
     margin-bottom: 0px;
     color: rgb(93 64 92)
 }
 
+/* Format careers subheader on About page */
 h4 {
     font-size: 21px;
     color: rgb(107 79 106);
 }
 
+/* Format rest of text on About page */
 #about-group p{
     font-size: 18px;
     color: rgb(77 53 76);
@@ -94,6 +97,7 @@ h4 {
     color: rgb(77 53 76);
 }
 
+/* Format all regular text */
 p{
     color: rgb(77 53 76);
     font-size: 18px;
@@ -106,12 +110,14 @@ p{
     margin-left: 50px;
 }
 
+/* Formay embedded image(s) */
 img {
     border-width: 5px;
     border-style: solid;
     border-color:rgb(146, 113, 145);
 }
 
+/* Format contact table */
 table, tbody, tr, td {
     border-collapse: collapse;
     background-color: rgb(236, 183, 234);
@@ -131,6 +137,7 @@ table, tbody, tr, td {
     text-align: left;
 }
 
+/* Format Home page */
 #home-title{
     font-size: 100px;
 }
