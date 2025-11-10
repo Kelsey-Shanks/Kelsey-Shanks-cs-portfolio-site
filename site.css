@@ -5,16 +5,11 @@ header {
     margin:0;
 }
 
-/* Format the font */
-body h1 h2 h3 h4 p{
-    margin: 0;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
 /* Format the Body */
 main {
     margin: 0px;
     margin-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Format the H2 headers */
