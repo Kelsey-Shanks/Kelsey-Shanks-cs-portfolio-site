@@ -7,6 +7,7 @@ header {
 
 body {
     margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 /* Format the Body */
@@ -17,20 +18,17 @@ main {
 
 /* Format the H2 headers */
 h2 {
-    font-family:Arial, Helvetica, sans-serif;
     font-size: 36px;
     margin-bottom: 10px;
 }
 
 /* Format the List of Navs*/
 header, nav {
-    font-family:Arial, Helvetica, sans-serif;
     font-size: 24px;
 }
 
 /* Format the Footer */
 footer {
-    font-family:Arial, Helvetica, sans-serif;
     font-size: 12px;
 }
 
