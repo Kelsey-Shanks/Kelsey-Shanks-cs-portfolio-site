@@ -186,12 +186,19 @@ table {
 /* Formatting portfolio listing */
 #portfolio-list {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding: 5;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 30px;
 }
 
 #portfolio-title {
     font-size: 21px;
     color: rgb(107 79 106);
     margin-bottom: 0px;
+}
+
+#portfolio-add {
+    color: rgb(77 53 76);
+    font-size: 18px;
 }
