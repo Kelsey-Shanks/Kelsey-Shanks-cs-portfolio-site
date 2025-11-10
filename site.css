@@ -130,3 +130,26 @@ table, tbody, tr, td {
 #data-column{
     text-align: left;
 }
+
+#home-title{
+    font-size: 100px;
+}
+
+#home-sub-title{
+    font-size: 30px;
+}
+
+#home-resume-button{
+    background-color: rgb(236, 183, 234);
+    border-style: solid;
+    border-color: rgb(146, 113, 145);
+    margin-right: 125px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgb(77 53 76);
+}
+
+#home-page-text{
+    text-align: center;
+}
