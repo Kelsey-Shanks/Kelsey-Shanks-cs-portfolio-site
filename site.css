@@ -24,7 +24,6 @@ header, h1 {
 
 /* Add background of page */
 body {
-    background-image: url('images/cherry-blossoms.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
