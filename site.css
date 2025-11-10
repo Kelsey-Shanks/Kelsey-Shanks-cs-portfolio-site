@@ -86,3 +86,9 @@ h4 {
     margin-left: 50px;
 }
 
+img {
+    border-width: 5px;
+    border-style: solid;
+    border-color:rgb(58, 80, 61);
+}
+
