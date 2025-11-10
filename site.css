@@ -1,6 +1,6 @@
 /* Format the Main Header */
 header {
-    background-color:rgb(89, 87, 95);
+    background-color:rgb(58, 80, 61);
     padding: 50px;
     margin:0;
 }
@@ -23,11 +23,16 @@ header, nav {
     font-size: 24px;
 }
 
+header, h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #top-links a {
-    background-color: red;
+    background-color: rgb(236, 183, 234);
     border-style: solid;
-    border-color: black;
+    border-color: rgb(146, 113, 145);
     margin-right: 50px;
+    padding: 10px;
 }
 
 /* Format the Footer */
