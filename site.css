@@ -1,4 +1,4 @@
-/* Format the Main Header */
+ti/* Format the Main Header */
 header {
     background-color:rgb(58, 80, 61);
     padding: 50px;
@@ -191,7 +191,7 @@ table {
     color: rgb(77 53 76);
 }
 
-#home-page-text {
+section #home-page-text {
     text-align: center;
     position: relative;
 }
