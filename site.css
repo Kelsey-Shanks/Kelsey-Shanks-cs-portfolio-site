@@ -134,6 +134,7 @@ p{
     float: left;
     margin-left: 10px;
     margin-right: 10px;
+}
 
 /* Formay embedded image(s) */
 img {
@@ -151,7 +152,6 @@ table, tbody, tr, td {
     padding: 10px;
     vertical-align: middle;
     color: #023f29
-    
 }
 
 table {
@@ -177,12 +177,12 @@ table {
     position: relative;
 }
     
-h2 #home-title{
+#home-title h2{
     font-size: 84px;
     text-align: center;
 }
 
-p #home-sub-title{
+#home-sub-title p{
     font-size: 32px;
     text-align: center;
 }
