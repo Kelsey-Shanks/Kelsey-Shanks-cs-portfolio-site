@@ -179,12 +179,12 @@ table {
     position: relative;
 }
     
-#home-title h2{
+#home-title {
     font-size: 84px;
     text-align: center;
 }
 
-#home-sub-title p{
+#home-sub-title {
     font-size: 32px;
     text-align: center;
 }
