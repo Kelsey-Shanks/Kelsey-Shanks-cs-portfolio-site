@@ -130,6 +130,11 @@ p{
     margin-left: 50px;
 }
 
+#home-image {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+
 /* Formay embedded image(s) */
 img {
     border-width: 5px;
