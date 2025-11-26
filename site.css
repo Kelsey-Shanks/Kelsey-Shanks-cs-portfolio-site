@@ -172,11 +172,16 @@ table {
 }
 
 /* Format Home page */
-section #home-title{
+#home-page-text {
+    text-align: center;
+    position: relative;
+}
+    
+#home-title h2{
     font-size: 84px;
 }
 
-section #home-sub-title{
+#home-sub-title p{
     font-size: 32px;
 }
 
@@ -189,11 +194,6 @@ section #home-sub-title{
     padding-left: 20px;
     padding-right: 20px;
     color: rgb(77 53 76);
-}
-
-section #home-page-text {
-    text-align: center;
-    position: relative;
 }
 
 /* Formatting portfolio listing */
