@@ -17,6 +17,7 @@ nav {
     text-align: center;
 }
 
+/*Format Header Title */
 header, h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(251 246 251);
@@ -24,6 +25,7 @@ header, h1 {
     margin-bottom: 50px;
 }
 
+/*Format Header Links Buttons*/
 #top-links a {
     background-color: rgb(236, 183, 234);
     border-style: solid;
