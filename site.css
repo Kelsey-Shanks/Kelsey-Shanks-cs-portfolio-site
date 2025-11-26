@@ -172,12 +172,12 @@ table {
 }
 
 /* Format Home page */
-#home-title{
-    font-size: 100px;
+section #home-title{
+    font-size: 84px;
 }
 
-#home-sub-title{
-    font-size: 30px;
+section #home-sub-title{
+    font-size: 32px;
 }
 
 #home-resume-button{
