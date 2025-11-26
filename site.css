@@ -188,6 +188,8 @@ table {
 
 #home-page-text {
     text-align: center;
+    padding-left: 600px;
+    position: relative;
 }
 
 /* Formatting portfolio listing */
