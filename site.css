@@ -225,3 +225,8 @@ table {
 #portfolio-list p{
     margin-top: 10px;
 }
+
+#resume-view{
+    width: 60%;
+    height: 600px;
+}
