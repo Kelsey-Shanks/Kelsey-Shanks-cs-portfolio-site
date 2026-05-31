@@ -2,53 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Single Page PDF Viewer</title>
-    <!-- Load PDF.js from a public CDN -->
+    <!-- Include PDF.js from a public CDN -->
     <script src="https://cloudflare.com"></script>
     <style>
-        body { font-family: sans-serif; text-align: center; background: #f4f4f4; margin: 20px; }
-        #canvas-container { background: white; display: inline-block; padding: 10px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        canvas { border: 1px solid #ccc; max-width: 100%; height: auto; }
-        .controls { margin-bottom: 15px; }
-        button { padding: 8px 15px; font-size: 14px; cursor: pointer; border: 1px solid #ccc; border-radius: 4px; background: white; }
-        button:hover { background: #eee; }
-        #page-info { margin: 0 15px; font-weight: bold; }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f9;
+            margin: 20px;
+        }
+        .controls {
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        #page-info {
+            font-size: 16px;
+            margin: 0 10px;
+        }
+        #canvas-container {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            background: white;
+            padding: 10px;
+        }
+        canvas {
+            display: block;
+            max-width: 100%;
+        }
     </style>
 </head>
 <body>
 
     <div class="controls">
         <button id="prev-btn">Previous</button>
-        <span id="page-info">Page <span id="page-num">0</span> of <span id="page-count">0</span></span>
+        <span id="page-info">Page <span id="page-num">1</span> of <span id="page-count">0</span></span>
         <button id="next-btn">Next</button>
     </div>
 
     <div id="canvas-container">
-        <canvas id="pdf-render"></canvas>
+        <canvas id="pdf-canvas"></canvas>
     </div>
 
     <script>
-        // PDF file in repo
+        // Update this path to match your folder and PDF filename
         const url = './documents/health-app-figma-presentation.pdf'; 
 
-        // Set up PDF.js worker
+        // Point PDF.js to the worker script
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cloudflare.com';
 
         let pdfDoc = null,
             pageNum = 1,
             pageIsRendering = false,
-            pageNumIsPending = null;
+            pageNumPending = null;
 
         const scale = 1.5,
-              canvas = document.getElementById('pdf-render'),
+              canvas = document.getElementById('pdf-canvas'),
               ctx = canvas.getContext('2d');
 
-        // Render the specific page
+        // Render the target page
         function renderPage(num) {
             pageIsRendering = true;
 
+            // Fetch the specific page
             pdfDoc.getPage(num).then(page => {
-                const viewport = page.getViewport({ scale });
+                const viewport = page.getViewport({ scale: scale });
                 canvas.height = viewport.height;
                 canvas.width = viewport.width;
 
@@ -60,9 +85,9 @@
                 page.render(renderContext).promise.then(() => {
                     pageIsRendering = false;
 
-                    if (pageNumIsPending !== null) {
-                        renderPage(pageNumIsPending);
-                        pageNumIsPending = null;
+                    if (pageNumPending !== null) {
+                        renderPage(pageNumPending);
+                        pageNumPending = null;
                     }
                 });
 
@@ -74,7 +99,7 @@
         // Check for pending pages to queue up rendering
         function queueRenderPage(num) {
             if (pageIsRendering) {
-                pageNumIsPending = num;
+                pageNumPending = num;
             } else {
                 renderPage(num);
             }
@@ -101,7 +126,9 @@
             renderPage(pageNum);
         }).catch(err => {
             console.error('Error loading PDF: ', err);
+            alert('Could not load PDF. Check file path or console logs.');
         });
     </script>
+
 </body>
 </html>
