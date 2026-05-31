@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Page PDF Viewer</title>
+    <!-- Load PDF.js from a public CDN -->
+    <script src="https://cloudflare.com"></script>
+    <style>
+        body { font-family: sans-serif; text-align: center; background: #f4f4f4; margin: 20px; }
+        #canvas-container { background: white; display: inline-block; padding: 10px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        canvas { border: 1px solid #ccc; max-width: 100%; height: auto; }
+        .controls { margin-bottom: 15px; }
+        button { padding: 8px 15px; font-size: 14px; cursor: pointer; border: 1px solid #ccc; border-radius: 4px; background: white; }
+        button:hover { background: #eee; }
+        #page-info { margin: 0 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <button id="prev-btn">Previous</button>
+        <span id="page-info">Page <span id="page-num">0</span> of <span id="page-count">0</span></span>
+        <button id="next-btn">Next</button>
+    </div>
+
+    <div id="canvas-container">
+        <canvas id="pdf-render"></canvas>
+    </div>
+
+    <script>
+        // PDF file in repo
+        const url = './documents/health-app-figma-presentation.pdf'; 
+
+        // Set up PDF.js worker
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cloudflare.com';
+
+        let pdfDoc = null,
+            pageNum = 1,
+            pageIsRendering = false,
+            pageNumIsPending = null;
+
+        const scale = 1.5,
+              canvas = document.getElementById('pdf-render'),
+              ctx = canvas.getContext('2d');
+
+        // Render the specific page
+        function renderPage(num) {
+            pageIsRendering = true;
+
+            pdfDoc.getPage(num).then(page => {
+                const viewport = page.getViewport({ scale });
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+
+                page.render(renderContext).promise.then(() => {
+                    pageIsRendering = false;
+
+                    if (pageNumIsPending !== null) {
+                        renderPage(pageNumIsPending);
+                        pageNumIsPending = null;
+                    }
+                });
+
+                // Update DOM elements
+                document.getElementById('page-num').textContent = num;
+            });
+        }
+
+        // Check for pending pages to queue up rendering
+        function queueRenderPage(num) {
+            if (pageIsRendering) {
+                pageNumIsPending = num;
+            } else {
+                renderPage(num);
+            }
+        }
+
+        // Show Previous Page
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            if (pageNum <= 1) return;
+            pageNum--;
+            queueRenderPage(pageNum);
+        });
+
+        // Show Next Page
+        document.getElementById('next-btn').addEventListener('click', () => {
+            if (pageNum >= pdfDoc.numPages) return;
+            pageNum++;
+            queueRenderPage(pageNum);
+        });
+
+        // Get Document
+        pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
+            pdfDoc = pdfDoc_;
+            document.getElementById('page-count').textContent = pdfDoc.numPages;
+            renderPage(pageNum);
+        }).catch(err => {
+            console.error('Error loading PDF: ', err);
+        });
+    </script>
+</body>
+</html>
