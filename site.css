@@ -221,3 +221,7 @@ table {
     font-size: 18px;
     margin-left: 40px;
 }
+
+#portfolio-list p{
+    margin-top: 10px;
+}
