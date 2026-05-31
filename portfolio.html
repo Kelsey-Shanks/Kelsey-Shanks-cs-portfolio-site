@@ -35,6 +35,92 @@
                             <a id="portfolio-title" href="https://www.figma.com/proto/lJzUWElntvQWv8Sawxqkf6/Health-Platform-Project?page-id=0%3A1&node-id=1-12&viewport=-650%2C-845%2C0.5&t=8xz7Eg6tDMaJKI97-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A12">Figma Health App Design</a>
                         </h4>
                         <a id="portfolio-add" href="documents/health-app-figma-presentation.pdf">*View Explanation Slides</a>
+
+                        <div class="controls">
+                            <button id="prev-btn">Previous</button>
+                            <span id="page-info">Page <span id="page-num">0</span> of <span id="page-count">0</span></span>
+                            <button id="next-btn">Next</button>
+                        </div> portfol
+                        <div id="canvas-container">
+                            <canvas id="pdf-render"></canvas>
+                        </div>
+                        <script>
+                            // PDF file saved in repo
+                            const url = './documents/health-app-figma-presentation.pdf'; 
+
+                            // Set up PDF.js worker
+                            pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cloudflare.com';
+
+                            let pdfDoc = null,
+                                pageNum = 1,
+                                pageIsRendering = false,
+                                pageNumIsPending = null;
+
+                            const scale = 1.5,
+                                canvas = document.getElementById('pdf-render'),
+                                ctx = canvas.getContext('2d');
+
+                            // Render the specific page
+                            function renderPage(num) {
+                                pageIsRendering = true;
+
+                                pdfDoc.getPage(num).then(page => {
+                                    const viewport = page.getViewport({ scale });
+                                    canvas.height = viewport.height;
+                                    canvas.width = viewport.width;
+
+                                    const renderContext = {
+                                        canvasContext: ctx,
+                                        viewport: viewport
+                                    };
+
+                                    page.render(renderContext).promise.then(() => {
+                                        pageIsRendering = false;
+
+                                        if (pageNumIsPending !== null) {
+                                            renderPage(pageNumIsPending);
+                                            pageNumIsPending = null;
+                                        }
+                                    });
+
+                                    // Update DOM elements
+                                    document.getElementById('page-num').textContent = num;
+                                });
+                            }
+
+                            // Check for pending pages to queue up rendering
+                            function queueRenderPage(num) {
+                                if (pageIsRendering) {
+                                    pageNumIsPending = num;
+                                } else {
+                                    renderPage(num);
+                                }
+                            }
+
+                            // Show Previous Page
+                            document.getElementById('prev-btn').addEventListener('click', () => {
+                                if (pageNum <= 1) return;
+                                pageNum--;
+                                queueRenderPage(pageNum);
+                            });
+
+                            // Show Next Page
+                            document.getElementById('next-btn').addEventListener('click', () => {
+                                if (pageNum >= pdfDoc.numPages) return;
+                                pageNum++;
+                                queueRenderPage(pageNum);
+                            });
+
+                            // Get Document
+                            pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
+                                pdfDoc = pdfDoc_;
+                                document.getElementById('page-count').textContent = pdfDoc.numPages;
+                                renderPage(pageNum);
+                            }).catch(err => {
+                                console.error('Error loading PDF: ', err);
+                            });
+                        </script>
+
                          <p>&nbsp;&nbsp;&nbsp;&nbsp;- uses UI/UX Research and Design, Figma</p>
                     </li>
                     <li>
