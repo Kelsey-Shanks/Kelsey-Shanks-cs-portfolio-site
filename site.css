@@ -164,13 +164,13 @@ table {
     border-color: rgb(146, 113, 145);
 }
 
-#label-column p{
+#label-column {
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
 }
 
-#data-column p{
+#data-column {
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: left;
