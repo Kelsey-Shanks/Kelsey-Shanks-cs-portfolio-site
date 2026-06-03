@@ -148,10 +148,10 @@ img {
 
 /* Format contact table */
 table, tbody, tr, td {
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
     background-color: rgb(236, 183, 234);
-    border-style: solid;
-    border-color: rgb(146, 113, 145);
+    /*border-style: solid;*/
+    /*border-color: rgb(146, 113, 145);*/
     padding: 10px;
     vertical-align: middle;
     color: #023f29
@@ -160,13 +160,19 @@ table, tbody, tr, td {
 table {
     margin-left: auto;
     margin-right: auto;
+    border-style: solid;
+    border-color: rgb(146, 113, 145);
 }
 
-#label-column {
-    text-align: right;
+#label-column p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
 }
 
-#data-column{
+#data-column p{
+    margin-top: 0px;
+    margin-bottom: 0px;
     text-align: left;
 }
 
@@ -230,3 +236,4 @@ table {
     width: 97%;
     height: 900px;
 }
+
