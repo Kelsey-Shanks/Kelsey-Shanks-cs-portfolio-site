@@ -164,16 +164,20 @@ table {
     border-color: rgb(146, 113, 145);
 }
 
-#label-column {
+#label-column p{
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
 }
 
-#data-column {
+#data-column p{
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: left;
+}
+
+#label-column {
+    text-align: center;
 }
 
 #contact-top{
