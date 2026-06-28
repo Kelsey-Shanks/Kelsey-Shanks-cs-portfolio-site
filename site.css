@@ -1,4 +1,6 @@
 /* Format the Main Header */
+
+/*
 header {
     background-color:rgb(58, 80, 61);
     padding: 50px;
@@ -7,15 +9,129 @@ header {
     width: 99%;
     text-align: left;
 }
+    */
+
+/* EXPERIMENT BEGINS HERE */
+
+header {
+    background-color:rgb(58, 80, 61);
+    height: 100px;
+    left: 0;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .site-top-space {
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-nav {
+        display: flex;
+        flex: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .site-nav {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        padding-left: var(--space-x4);
+    }
+}
+
+@media (min-width: 992px) {
+    .site-nav-toggle {
+        display: none;
+    }
+}
+
+button:not([disabled]) {
+    cursor: pointer;
+}
+
+.header-nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav-item {
+    display: flex;
+    font-size: .875rem;
+    line-height: 1.25;
+    margin: 0 1em 0 0;
+}
+
+.nav-button-specific {
+    border-radius: 24px;
+    color: #fff;
+    display: inline-flex;
+    font-weight: 700;
+    padding: .875em;
+    text-decoration: none;
+}
+
+.site-nav-toggle .svg-icon {
+    height: 100%;
+    width: 100%;
+}
+
+.svg-icon {
+    align-items: center;
+    display: flex;
+    fill: none;
+    height: 24px;
+    justify-content: center;
+    line-height: 24px;
+    min-width: 24px;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    transition: all 300ms ease-out;
+    width: 24px;
+}
+
+.site-top-space {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 16px;
+    position: relative;
+    width: 100%;
+}
+
+.button-icon-only {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0;
+    color: #fff;
+    height: 24px;
+    padding: 0;
+    width: 24px;
+}
+
+/* EXPERIMENT ENDS HERE */
+
 
 /* Format the List of Navs*/
 header, nav {
     font-size: 24px;
 }
 
+/*
 nav {
     text-align: center;
 }
+*/
 
 /*Format Header Title */
 header, h1 {
@@ -26,7 +142,20 @@ header, h1 {
 }
 
 /*Format Header Links Buttons*/
+/*
 #top-links a {
+    background-color: rgb(236, 183, 234);
+    border-style: solid;
+    border-color: rgb(146, 113, 145);
+    margin-right: 50px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #065136;
+}
+    */
+
+.nav-button-specific a {
     background-color: rgb(236, 183, 234);
     border-style: solid;
     border-color: rgb(146, 113, 145);
@@ -240,4 +369,3 @@ table {
     width: 97%;
     height: 900px;
 }
-

@@ -7,16 +7,50 @@
     </head>
     <body background="images/cherry-blossoms (1).webp">
         <header>
-            <div id="site-top">
-                <h1>Kelsey Shanks</h1>
-                <nav id="top-links">
+            <div class="site-top-space">
+                <button id="site-nav-toggle" class="toggle-button-icon button button-icon-only">
+                    <svg aria-hidden="true" focusable="false" class="svg-icon">
+                        <use xlink:href="/images/svg/menu-icon-sprite.svg#menu"></use>
+                    </svg>
+                    <span class="sr-only">Open menu</span>
+                </button>
+                <h1 class="site-logo">Kelsey Shanks</h1>
+                <nav class="header-nav">
+                    <div id="site-nav" class="site-nav">
+                        <ul class="header-nav-list">
+                            <li class="header-nav-item">
+                                <a href=index.html class="nav-button-specific" aria-label="Home" aria-haspopup="menu" aria-expanded="false" 
+                                aria-controls="header-navigation-dropdown">Home</a>
+                            </li>
+                            <li class="header-nav-item">
+                                <a href=about-me.html class="nav-button-specific" aria-label="About" aria-haspopup="menu" aria-expanded="false" 
+                                aria-controls="header-navigation-dropdown">About</a>
+                            </li>
+                            <li class="header-nav-item">
+                                <a href=resume.html class="nav-button-specific" aria-label="Resume" aria-haspopup="menu" aria-expanded="false" 
+                                aria-controls="header-navigation-dropdown">Resume</a>
+                            </li>
+                            <li class="header-nav-item">
+                                <a href=portfolio.html class="nav-button-specific" aria-label="Portfolio" aria-haspopup="menu" aria-expanded="false" 
+                                aria-controls="header-navigation-dropdown">Portfolio</a>
+                            </li>
+                            <li class="header-nav-item">
+                                <a href=contact-me.html class="nav-button-specific" aria-label="Contact" aria-haspopup="menu" aria-expanded="false" 
+                                aria-controls="header-navigation-dropdown">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+                
+                <!--nav id="top-links">
                     <a href=index.html>Home</a>
                     <a href="about-me.html">About</a>
                     <a href="resume.html">Resume</a>
                     <a href="portfolio.html">Portfolio</a>
                     <a href="contact-me.html">Contact</a>
-                </nav>
-            </div>
+                </nav-->
+            
         </header>
         <main>
             <div id="home-image">
