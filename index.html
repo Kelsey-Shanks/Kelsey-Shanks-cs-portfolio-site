@@ -12,11 +12,13 @@
   
             <nav class="nav-container">
                 <!-- Hamburger Icon for Mobile -->
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    ☰
+                <button class="nav-toggle" id="nav-toggle-id" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
                 <script>
-                    const toggle_button = document.getElementById('.nav-toggle');
+                    const toggle_button = document.getElementById('.nav-toggle-id');
                     const nav_links = document.getElementById('.nav-links');
 
                     toggle_button.addEventListener('click', () => {
