@@ -1,5 +1,4 @@
 /* Format the Main Header */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -63,13 +62,13 @@
         top: 100px; /* Adjust based on header height */
         left: 0;
         background-color: rgb(248, 87, 235);
+        border-color:black;
+        border: 1px;
     }
 
     /* Show this class when toggled */
     .nav-links.active {
         display: flex;
-        border: 1px;
-        border-color: black;
     }
 
     /*Hamburger -> "X" when open*/
