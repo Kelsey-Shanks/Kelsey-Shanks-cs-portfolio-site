@@ -7,9 +7,7 @@
     </head>
     <body background="images/cherry-blossoms (1).webp">
         <header class="navbar">
-
             <div class="logo">Kelsey Shanks</div>
-  
             <nav class="nav-container">
                 <!-- Hamburger Icon for Mobile -->
                 <button class="nav-toggle" id="nav-toggle-id" aria-label="Toggle navigation">
@@ -17,7 +15,6 @@
                     <span></span>
                     <span></span>
                 </button>
-                
                 <!-- Navigation Links -->
                 <ul class="nav-links" id="nav-links-id">
                     <li><a href=index.html>Home</a></li>
@@ -26,12 +23,10 @@
                     <li><a href=portfolio.html>Portoflio</a></li>
                     <li><a href=contact-me.html>Contact</a></li>
                 </ul>
-
                 <!-- Event Listener for Menu -->
                 <script>
                     const toggle_button = document.getElementById('nav-toggle-id');
                     const nav_links = document.getElementById('nav-links-id');
-
                     toggle_button.addEventListener('click', () => {
                         toggle_button.classList.toggle('active');
                         nav_links.classList.toggle('active');
@@ -39,9 +34,7 @@
                         toggle_button.setAttribute('aria-expanded', isExpanded);
                     });
                 </script>
-
             </nav>
-            
         </header>
         <main>
             <div id="home-image">
