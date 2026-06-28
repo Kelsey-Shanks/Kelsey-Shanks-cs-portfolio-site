@@ -61,6 +61,7 @@
         top: 100px; /* Adjust based on header height */
         left: 0;
         background-color: rgb(58, 80, 61);
+        z-index: 9999;
     }
 
     /* Show this class when toggled */
