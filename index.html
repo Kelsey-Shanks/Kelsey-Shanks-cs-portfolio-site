@@ -7,7 +7,7 @@
     </head>
     <body background="images/cherry-blossoms (1).webp">
         <header class="navbar">
-            
+
             <div class="logo">Kelsey Shanks</div>
   
             <nav class="nav-container">
@@ -15,6 +15,14 @@
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     ☰
                 </button>
+                <script>
+                    const toggle_button = document.querySelector('.nav-toggle');
+                    const nav_links = document.querySelector('.nav-links');
+
+                    toggle_button.addEventListener('click', () => {
+                    nav_links.classList.toggle('active');
+                    });
+                </script>
                 
                 <!-- Navigation Links -->
                 <ul class="nav-links">
