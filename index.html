@@ -16,11 +16,14 @@
                     ☰
                 </button>
                 <script>
-                    const toggle_button = document.querySelector('.nav-toggle');
-                    const nav_links = document.querySelector('.nav-links');
+                    const toggle_button = document.getElementById('.nav-toggle');
+                    const nav_links = document.getElementById('.nav-links');
 
                     toggle_button.addEventListener('click', () => {
-                    nav_links.classList.toggle('active');
+                        toggle_button.classList.toggle('active');
+                        nav_links.classList.toggle('active');
+                        const isExpanded = toggle_button.classList.contains('active');
+                        toggle_button.setAttribute('aria-expanded', isExpanded);
                     });
                 </script>
                 
