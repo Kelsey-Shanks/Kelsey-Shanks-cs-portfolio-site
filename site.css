@@ -55,20 +55,34 @@
     display: flex; /* Show hamburger on mobile */
   }
 
-  .nav-links {
-    display: none; /* Hide menu by default on mobile */
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 60px; /* Adjust based on header height */
-    left: 0;
-    background-color: #333;
-  }
+    .nav-links {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: #333;
+    }
 
-  /* Show this class when toggled */
-  .nav-links.active {
-    display: flex;
-  }
+    /* Show this class when toggled */
+    .nav-links.active {
+        display: flex;
+        border: 1px;
+    }
+
+    /*Hamburger -> "X" when open*/
+    .nav-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
 }
 
 header {
