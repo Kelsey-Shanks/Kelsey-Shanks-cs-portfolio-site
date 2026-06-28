@@ -48,7 +48,7 @@
 }
 
 /* Tablet and Mobile styles */
-@media (max-width: 768px) {
+@media (max-width: 946px) {
   .nav-toggle {
     display: flex; /* Show hamburger on mobile */
   }
