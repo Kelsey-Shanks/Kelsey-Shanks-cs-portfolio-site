@@ -120,12 +120,23 @@
         transform: translateY(-9px) rotate(-45deg);
     }
 
+
+    /* Center Image in Mobile Mode */
     .home-img {
         display: flex;
         justify-content: center;
     }
 
     .home-img img {
+        float: none;
+    }
+
+    #about-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    #about-image img {
         float: none;
     }
 }
@@ -267,7 +278,7 @@ p{
 }
 
 /* Format image on About page */
-#about-image {
+#about-image img {
     float: left;
     width: 40%;
     margin-left: 50px;
