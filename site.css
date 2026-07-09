@@ -78,7 +78,7 @@
     filter: drop-shadow(0 0 6px var(--hover-glow-color)) drop-shadow(0 0 12px  var(--hover-glow-color));
 }
 
-.home-img {
+.home-img img {
     float: left;
     margin-left: 10px;
     margin-right: 10px;
@@ -121,10 +121,12 @@
     }
 
     .home-img {
-        display: block;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-img img {
         float: none;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
