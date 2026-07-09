@@ -339,6 +339,10 @@ table {
     margin-left: 30px;
 }
 
+#portfolio-list li {
+    margin-top: 35px;
+}
+
 #portfolio-title {
     font-size: 21px;
     color: rgb(107 79 106);
