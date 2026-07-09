@@ -29,6 +29,12 @@
   transition: color 0.3s;
 }
 
+/* Format Links Hover Effect*/
+.nav-links li a:hover {
+    color: rgb(255, 176, 252);
+    font-size: 28px;
+}
+
 .nav-toggle {
   display: none; /* Hidden by default on desktop */
   flex-direction: column;
