@@ -216,6 +216,13 @@ h4 {
 #about-group p{
     font-size: 18px;
     color: rgb(77 53 76);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#about-group h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 #about-text ul {
