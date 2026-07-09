@@ -53,12 +53,16 @@
     font-size: 28px;
 }
 
+#data-column a {
+    color: rgb(77 53 76);
+}
+
 #data-column a:hover {
     color: rgb(134, 59, 132);
 }
 
 #label-column img:hover {
-    filter: drop-shadow(0 0 6px rgb(255, 221, 254)) drop-shadow(0 0 12px  rgb(255, 221, 254));
+    filter: drop-shadow(0 0 6px rgb(255, 230, 254)) drop-shadow(0 0 12px  rgb(255, 230, 254));
 }
 
 
