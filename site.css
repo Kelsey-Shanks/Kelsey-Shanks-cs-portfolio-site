@@ -81,12 +81,12 @@
 .home-img img {
     float: left;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 40px;
     margin-bottom: 20px;
 }
 
 /* Tablet and Mobile styles */
-@media (max-width: 977px) {
+@media (max-width: 1033px) {
   .nav-toggle {
     display: flex; /* Show hamburger on mobile */
   }
@@ -329,6 +329,7 @@ table {
 #home-page-text {
     text-align: center;
     position: relative;
+    margin-right: 40px;
 }
     
 #home-title {
