@@ -78,6 +78,13 @@
     filter: drop-shadow(0 0 6px var(--hover-glow-color)) drop-shadow(0 0 12px  var(--hover-glow-color));
 }
 
+.home-img {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
 /* Tablet and Mobile styles */
 @media (max-width: 946px) {
   .nav-toggle {
@@ -113,7 +120,7 @@
         transform: translateY(-9px) rotate(-45deg);
     }
 
-    #home-image {
+    .home-img {
         display: block;
         float: none;
         margin-left: auto;
@@ -262,13 +269,6 @@ p{
     float: left;
     width: 40%;
     margin-left: 50px;
-}
-
-#home-image {
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
 }
 
 /* Formay embedded image(s) */
