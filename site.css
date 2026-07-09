@@ -113,10 +113,9 @@
         transform: translateY(-9px) rotate(-45deg);
     }
 
-    #home-image img{
-        margin-bottom: 20px;
-        float: none;
+    #home-image {
         display: block;
+        float: none;
         margin-left: auto;
         margin-right: auto;
     }
@@ -269,6 +268,7 @@ p{
     float: left;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 /* Formay embedded image(s) */
