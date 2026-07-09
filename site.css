@@ -85,6 +85,13 @@
     margin-bottom: 20px;
 }
 
+/* Format image on About page */
+#about-image img {
+    float: left;
+    width: 40%;
+    margin-left: 50px;
+}
+
 /* Tablet and Mobile styles */
 @media (max-width: 1033px) {
   .nav-toggle {
@@ -277,13 +284,6 @@ h4 {
 p{
     color: var(--p-text-color);
     font-size: 18px;
-}
-
-/* Format image on About page */
-#about-image img {
-    float: left;
-    width: 40%;
-    margin-left: 50px;
 }
 
 /* Formay embedded image(s) */
