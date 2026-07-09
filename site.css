@@ -183,6 +183,8 @@ footer {
     bottom: 5px;
     width: 100%;
     background-color: var(--green-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 footer p {
