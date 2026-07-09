@@ -113,6 +113,13 @@
     .nav-toggle.active span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
+
+    #home-image {
+        display: flex;               /* Activates flexbox layout */
+        justify-content: center;     /* Centers horizontally */
+        align-items: center;         /* Centers vertically */
+        margin-bottom: 20px;
+    }
 }
 
 header {
