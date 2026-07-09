@@ -53,30 +53,13 @@
     font-size: 28px;
 }
 
-.data-column a:hover {
+#data-column a:hover {
     color: rgb(255, 176, 252);
 }
 
-/*
-.label-column img:hover {
-    background-color: rgb(255, 176, 252);
-    padding: 2px;
-}
-*/
 
-
-.label-column img:hover {
-  width: 350px;
-  padding: 24px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  
-  /* Multi-layered shadow strategy */
-  box-shadow: 
-    0 0 10px rgba(0, 242, 254, 0.2),  /* Intense core glow */
-    0 0 30px rgba(0, 242, 254, 0.1),  /* Medium spread */
-    0 0 70px rgba(0, 242, 254, 0.05); /* Soft outer ambiance */
+#label-column img:hover {
+    filter: drop-shadow(0 0 6px rgb(255, 176, 252)) drop-shadow(0 0 12px rgb(255, 176, 252))
 }
 
 
