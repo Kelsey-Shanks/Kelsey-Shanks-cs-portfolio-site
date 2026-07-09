@@ -225,6 +225,11 @@ h4 {
     margin-bottom: 20px;
 }
 
+#about-group a:hover{
+    color: rgb(134, 59, 132);
+    filter: drop-shadow(0 0 6px rgb(255, 230, 254)) drop-shadow(0 0 12px  rgb(255, 230, 254));
+}
+
 #about-text ul {
     list-style-type: none;
 }
@@ -347,6 +352,11 @@ table {
     font-size: 21px;
     color: rgb(107 79 106);
     margin-bottom: 0px;
+}
+
+#portfolio-title:hover{
+    color: rgb(134, 59, 132);
+    filter: drop-shadow(0 0 6px rgb(255, 230, 254)) drop-shadow(0 0 12px  rgb(255, 230, 254));
 }
 
 #portfolio-add {
