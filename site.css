@@ -90,6 +90,7 @@
     float: left;
     width: auto;
     margin-left: 50px;
+    margin-top: 30px;
 }
 
 #about-text {
@@ -260,6 +261,7 @@ h4 {
     color: var(--p-text-color);
     margin-bottom: 20px;
     margin-top: 20px;
+    margin-right: 40px;
 }
 
 #about-group h3 {
