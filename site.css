@@ -384,3 +384,8 @@ table {
     width: 97%;
     height: 900px;
 }
+
+#portfolio-list iframe {
+    width: 90%;
+    margin-right: 40px;
+}
