@@ -1,5 +1,5 @@
 :root {
-    --green-color: #FFFFFF;
+    --green-color: rgb(58, 80, 61);
     --t1-text-color: rgb(107 79 106);       /* Lighter Title Color */
     --t2-text-color: rgb(93 64 92);         /* Darker Title Color */
     --p-text-color: rgb(77 53 76);          /* Normal Text Color */
@@ -23,7 +23,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgb(58, 80, 61);
+  background-color: var(--green-color);
   color: var(--white-text-color);
   position: relative
 }
@@ -34,7 +34,7 @@
 }
 
 .nav-links li a {
-  color: rgb(251 246 251);
+  color: var(--white-text-color);
   text-decoration: none;
   font-size: 24px;
   padding: 2rem;
@@ -56,30 +56,28 @@
 .nav-toggle span {
   width: 100%;
   height: 3px;
-  background-color: rgb(251 246 251);
+  background-color: var(--white-text-color);
   transition: all 0.3s ease;
 }
 
 /* Format Links Hover Effect*/
 .nav-links li a:hover {
-    color: rgb(255, 176, 252);
+    color: var(--nav-hover-color);
     font-size: 28px;
 }
 
 #data-column a {
-    color: rgb(77 53 76);
+    color: var(--p-text-color);
 }
 
 #data-column a:hover {
-    color: rgb(134, 59, 132);
-    filter: drop-shadow(0 0 6px rgb(255, 230, 254)) drop-shadow(0 0 12px  rgb(255, 230, 254));
+    color: var(--hover-text-color);
+    filter: drop-shadow(0 0 6px var(--hover-glow-color)) drop-shadow(0 0 12px  var(--hover-glow-color));
 }
 
 #label-column img:hover {
-    filter: drop-shadow(0 0 6px rgb(255, 230, 254)) drop-shadow(0 0 12px  rgb(255, 230, 254));
+    filter: drop-shadow(0 0 6px var(--hover-glow-color)) drop-shadow(0 0 12px  var(--hover-glow-color));
 }
-
-
 
 /* Tablet and Mobile styles */
 @media (max-width: 946px) {
@@ -94,7 +92,7 @@
         position: absolute;
         top: 100px; /* Adjust based on header height */
         left: 0;
-        background-color: rgb(58, 80, 61);
+        background-color: var(--green-color);
         z-index: 9999;
     }
 
@@ -118,7 +116,7 @@
 }
 
 header {
-    background-color:rgb(58, 80, 61);
+    background-color:var(--green-color);
     padding: 50px;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -139,27 +137,15 @@ nav {
 /*Format Header Title */
 header, h1 {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(251 246 251);
+    color: var(--white-text-color);
     font-size: 60px;
     margin-bottom: 50px;
 }
 
 .logo {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(251 246 251);
+    color: var(--white-text-color);
     font-size: 60px;
-}
-
-/*Format Header Links Buttons*/
-#top-links a {
-    background-color: rgb(236, 183, 234);
-    border-style: solid;
-    border-color: rgb(146, 113, 145);
-    margin-right: 50px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #065136;
 }
 
 /* Add background of page */
@@ -185,22 +171,22 @@ main {
 h2 {
     font-size: 36px;
     margin-bottom: 25px;
-    color: rgb(107 79 106);
+    color: var(--t1-text-color);
 }
 
 /* Format the Footer */
 footer {
     font-size: 12px;
-    color: rgb(251 246 251);
+    color: var(--white-text-color);
     position: fixed;
     left: 0px;
     bottom: 5px;
     width: 100%;
-    background-color:rgb(58, 80, 61);
+    background-color: var(--green-color);
 }
 
 footer p {
-    color: rgb(251 246 251);
+    color: var(--white-text-color);
     margin-left: 20px;
 }
 
@@ -215,20 +201,20 @@ footer p {
 h3{
     font-size: 24px;
     margin-bottom: 0px;
-    color: rgb(93 64 92)
+    color: var(--t2-text-color);
 }
 
 /* Format careers subheader on About page */
 h4 {
     font-size: 21px;
-    color: rgb(107 79 106);
+    color: var(--t1-text-color);
     margin-bottom: 10px;
 }
 
 /* Format rest of text on About page */
 #about-group p{
     font-size: 18px;
-    color: rgb(77 53 76);
+    color: var(--p-text-color);
     margin-bottom: 20px;
     margin-top: 20px;
 }
@@ -239,8 +225,8 @@ h4 {
 }
 
 #about-group a:hover{
-    color: rgb(134, 59, 132);
-    filter: drop-shadow(0 0 6px rgb(255, 230, 254)) drop-shadow(0 0 12px  rgb(255, 230, 254));
+    color: var(--hover-text-color);
+    filter: drop-shadow(0 0 6px var(--hover-glow-color)) drop-shadow(0 0 12px  var(--hover-glow-color));
 }
 
 #about-text ul {
@@ -254,12 +240,12 @@ h4 {
 }
 
 #about-text p{
-    color: rgb(77 53 76);
+    color: var(--p-text-color);
 }
 
 /* Format all regular text */
 p{
-    color: rgb(77 53 76);
+    color: var(--p-text-color);
     font-size: 18px;
 }
 
@@ -280,25 +266,21 @@ p{
 img {
     border-width: 5px;
     border-style: solid;
-    border-color:rgb(146, 113, 145);
+    border-color:var(--photo-border-color);
 }
 
 /* Format contact table */
 table, tbody, tr, td {
-    /*border-collapse: collapse;*/
     background-color: rgb(236, 183, 234);
-    /*border-style: solid;*/
-    /*border-color: rgb(146, 113, 145);*/
     padding: 10px;
     vertical-align: middle;
-    color: #023f29
 }
 
 table {
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
-    border-color: rgb(146, 113, 145);
+    border-color: var(--photo-border-color);
 }
 
 #label-column p{
@@ -337,17 +319,6 @@ table {
     text-align: center;
 }
 
-#home-resume-button{
-    background-color: rgb(236, 183, 234);
-    border-style: solid;
-    border-color: rgb(146, 113, 145);
-    margin-right: 125px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: rgb(77 53 76);
-}
-
 /* Formatting portfolio listing */
 #portfolio-list {
     list-style-type: none;
@@ -363,17 +334,17 @@ table {
 
 #portfolio-title {
     font-size: 21px;
-    color: rgb(107 79 106);
+    color: var(--t1-text-color);
     margin-bottom: 0px;
 }
 
 #portfolio-title:hover{
-    color: rgb(134, 59, 132);
-    filter: drop-shadow(0 0 6px rgb(255, 230, 254)) drop-shadow(0 0 12px  rgb(255, 230, 254));
+    color: var(--hover-text-color);
+    filter: drop-shadow(0 0 6px var(--hover-glow-color)) drop-shadow(0 0 12px  var(--hover-glow-color));
 }
 
 #portfolio-add {
-    color: rgb(77 53 76);
+    color: var(--p-text-color);
     font-size: 18px;
     margin-left: 40px;
 }
