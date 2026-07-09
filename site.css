@@ -8,7 +8,6 @@
     --hover-glow-color: rgb(255, 230, 254); /*  Hover Colors */
     --nav-hover-color: rgb(255, 176, 252);  /* -------------------- */
     --photo-border-color: rgb(146, 113, 145);
-    
 }
 
 /* Format the Main Header */
@@ -114,11 +113,12 @@
         transform: translateY(-9px) rotate(-45deg);
     }
 
-    #home-image {
-        display: flex;               /* Activates flexbox layout */
-        justify-content: center;     /* Centers horizontally */
-        align-items: center;         /* Centers vertically */
+    #home-image img{
         margin-bottom: 20px;
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
