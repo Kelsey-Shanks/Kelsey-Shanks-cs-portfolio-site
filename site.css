@@ -138,14 +138,9 @@
         float: none;
     }
 
-    #about-image {
-        display: flex;
-        justify-content: center;
-    }
-
     #about-image img {
         float: none;
-        width: 90%;
+        width: auto;
         margin-left: 10px;
     }
 }
