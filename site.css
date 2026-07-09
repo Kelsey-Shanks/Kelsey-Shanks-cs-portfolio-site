@@ -1,3 +1,16 @@
+:root {
+    --green-color: #FFFFFF;
+    --t1-text-color: rgb(107 79 106);       /* Lighter Title Color */
+    --t2-text-color: rgb(93 64 92);         /* Darker Title Color */
+    --p-text-color: rgb(77 53 76);          /* Normal Text Color */
+    --white-text-color: rgb(251 246 251);
+    --hover-text-color: rgb(134, 59, 132);  /* -------------------- */
+    --hover-glow-color: rgb(255, 230, 254); /*  Hover Colors */
+    --nav-hover-color: rgb(255, 176, 252);  /* -------------------- */
+    --photo-border-color: rgb(146, 113, 145);
+    
+}
+
 /* Format the Main Header */
 * {
   box-sizing: border-box;
@@ -11,7 +24,7 @@
   align-items: center;
   padding: 1rem 2rem;
   background-color: rgb(58, 80, 61);
-  color: rgb(251 246 251);
+  color: var(--white-text-color);
   position: relative
 }
 
