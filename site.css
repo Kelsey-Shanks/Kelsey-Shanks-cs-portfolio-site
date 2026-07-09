@@ -88,8 +88,14 @@
 /* Format image on About page */
 #about-image img {
     float: left;
-    width: 40%;
+    width: auto;
     margin-left: 50px;
+}
+
+#about-text {
+    float: left;
+    width: 50%;
+    margin-right: 10px;
 }
 
 /* Tablet and Mobile styles */
@@ -142,6 +148,11 @@
         float: none;
         width: auto;
         margin-left: 10px;
+    }
+
+    #about-text {
+        width: auto;
+        margin-right: 40px;
     }
 }
 
@@ -263,12 +274,6 @@ h4 {
 
 #about-text ul {
     list-style-type: none;
-}
-
-#about-text {
-    float: left;
-    width: 50%;
-    margin-right: 10px;
 }
 
 #about-text p{
